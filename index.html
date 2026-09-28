@@ -1,557 +1,1643 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For You, My Love ❤️</title>
+<title>Happy Boyfriend Day ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  background: #111111;
-  color: #f8f1e8;
-  font-family: 'DM Sans', sans-serif;
-  overflow-x: hidden;
+body{
+  background:#fff8f5;
+  color:#4b2029;
+  font-family:"DM Sans",sans-serif;
+  overflow-x:hidden;
 }
 
-section {
-  min-height: 100vh;
-  padding: 70px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+section{
+  min-height:100vh;
+  padding:80px 20px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
 }
 
-.small {
-  font-size: 12px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  opacity: 0.6;
-  margin-bottom: 18px;
+h1,h2,h3{
+  font-family:"Cormorant Garamond",serif;
 }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
+h1{
+  font-size:clamp(3rem,12vw,6rem);
+  line-height:.9;
 }
 
-h1 {
-  font-size: clamp(48px, 14vw, 82px);
-  line-height: 0.95;
+h2{
+  font-size:clamp(2.5rem,9vw,4.5rem);
+  text-align:center;
+  margin-bottom:20px;
 }
 
-h2 {
-  font-size: clamp(36px, 10vw, 58px);
-  margin-bottom: 25px;
+p{
+  line-height:1.8;
 }
 
-p {
-  max-width: 600px;
-  line-height: 1.8;
-  font-size: 17px;
-  color: #ddd3c8;
+.script{
+  font-family:"Great Vibes",cursive;
 }
 
-.red {
-  color: #e63946;
+.eyebrow{
+  font-size:.72rem;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+  opacity:.7;
 }
 
-.heart {
-  color: #e63946;
-  animation: heartbeat 1.5s infinite;
+.btn{
+  border:0;
+  background:#9d3045;
+  color:white;
+  padding:16px 25px;
+  border-radius:999px;
+  font-weight:700;
+  letter-spacing:1px;
+  cursor:pointer;
+  box-shadow:0 12px 30px rgba(157,48,69,.22);
+  transition:.3s;
 }
 
-@keyframes heartbeat {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.18); }
+.btn:hover{
+  transform:translateY(-3px);
 }
 
-button {
-  margin-top: 35px;
-  border: 1px solid #e63946;
-  background: #e63946;
-  color: white;
-  padding: 15px 28px;
-  border-radius: 50px;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
+.heart{
+  color:#c52d4a;
 }
 
-button:hover {
-  transform: scale(1.04);
+.small{
+  max-width:680px;
+  text-align:center;
 }
 
-.hero {
+/* Floating hearts */
+.float-heart{
+  position:fixed;
+  bottom:-30px;
+  font-size:18px;
+  animation:floatUp linear forwards;
+  pointer-events:none;
+  z-index:20;
+}
+
+@keyframes floatUp{
+  to{
+    transform:translateY(-110vh) rotate(25deg);
+    opacity:0;
+  }
+}
+
+/* OPENING */
+#opening{
   background:
-    radial-gradient(circle at 50% 30%, #3a1619 0%, #111111 45%);
+    radial-gradient(circle at 20% 20%,#ffe2e7,transparent 30%),
+    radial-gradient(circle at 80% 80%,#ffd9df,transparent 30%),
+    #fff8f5;
+  text-align:center;
 }
 
-.hero .sub {
-  margin-top: 25px;
-  font-size: 16px;
+.opening-title{
+  color:#7c2638;
 }
 
-.story {
-  background: #f5eee6;
-  color: #171717;
+.opening-sub{
+  margin:25px 0 35px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.35rem;
+  font-style:italic;
 }
 
-.story p {
-  color: #4d4640;
+.scroll-note{
+  margin-top:25px;
+  font-size:.75rem;
+  opacity:.55;
 }
 
-.story-card {
-  max-width: 650px;
-  width: 100%;
+/* MUSIC */
+.music{
+  min-height:auto;
+  padding:35px 20px;
+  background:#8d263c;
+  color:white;
 }
 
-.story-line {
-  border-left: 2px solid #e63946;
-  padding: 0 0 30px 25px;
-  text-align: left;
-  margin: 25px 0;
+.music-box{
+  text-align:center;
 }
 
-.story-line strong {
-  color: #e63946;
-  display: block;
-  margin-bottom: 8px;
-  font-size: 14px;
-  letter-spacing: 2px;
+.music-title{
+  font-size:.7rem;
+  letter-spacing:4px;
+  opacity:.75;
 }
 
-.things {
-  background: #171717;
+.music-name{
+  font-family:"Cormorant Garamond",serif;
+  font-size:2.4rem;
+  margin:5px 0 15px;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  max-width: 650px;
-  width: 100%;
+.play{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.5);
+  background:white;
+  color:#8d263c;
+  font-size:1.2rem;
+  cursor:pointer;
 }
 
-.card {
-  background: #242424;
-  border: 1px solid #333;
-  border-radius: 18px;
-  padding: 25px 15px;
-  min-height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 18px;
+/* STORY */
+.story{
+  background:#fff8f5;
 }
 
-.quiz {
-  background: #e63946;
-  color: white;
+.story-card{
+  max-width:760px;
+  text-align:center;
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.35rem;
+  line-height:1.8;
 }
 
-.quiz p {
-  color: white;
+.story-card strong{
+  color:#a02f45;
 }
 
-.question {
-  background: rgba(0,0,0,0.15);
-  padding: 25px;
-  border-radius: 20px;
-  max-width: 500px;
-  width: 100%;
-  margin-top: 20px;
+/* TIMELINE */
+.timeline{
+  max-width:700px;
+  width:100%;
+  margin-top:35px;
 }
 
-.option {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  background: white;
-  color: #222;
-  border: none;
+.timeline-item{
+  padding:22px;
+  border-left:2px solid #d88a99;
+  margin-bottom:20px;
+  background:rgba(255,255,255,.6);
+  border-radius:0 18px 18px 0;
 }
 
-.result {
-  margin-top: 20px;
-  font-weight: 700;
-  min-height: 30px;
+.timeline-date{
+  font-size:.7rem;
+  letter-spacing:3px;
+  color:#9d3045;
+  font-weight:bold;
 }
 
-.future {
-  background: #f5eee6;
-  color: #171717;
+/* MEMORY */
+.memory{
+  background:#f8e4e5;
 }
 
-.future p {
-  color: #4d4640;
+.memory-frame{
+  max-width:430px;
+  width:100%;
+  padding:12px;
+  background:white;
+  border-radius:28px;
+  box-shadow:0 20px 50px rgba(100,30,40,.15);
+  transform:rotate(-2deg);
 }
 
-.arrow {
-  font-size: 28px;
-  margin: 18px 0;
+.memory-frame img{
+  width:100%;
+  border-radius:20px;
+  display:block;
 }
 
-.final {
+.memory-text{
+  max-width:650px;
+  text-align:center;
+  margin-bottom:35px;
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.45rem;
+}
+
+/* LITTLE THINGS */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:16px;
+  max-width:800px;
+  width:100%;
+  margin-top:25px;
+}
+
+.card{
+  background:white;
+  border:1px solid #f0d1d6;
+  border-radius:24px;
+  padding:28px 20px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(90,30,40,.06);
+}
+
+.card-icon{
+  font-size:2rem;
+  margin-bottom:12px;
+}
+
+.card h3{
+  font-size:1.35rem;
+  margin-bottom:8px;
+}
+
+/* CHATS */
+.chats{
+  background:#fff0f2;
+}
+
+.chat-grid{
+  width:100%;
+  max-width:550px;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.chat-grid img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 12px 35px rgba(60,20,30,.13);
+}
+
+/* JAANE */
+.jaane{
+  background:#8d263c;
+  color:white;
+  text-align:center;
+}
+
+.big-jaane{
+  font-family:"Great Vibes",cursive;
+  font-size:clamp(5rem,20vw,10rem);
+  margin:10px 0;
+}
+
+.jaane-heart{
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  50%{transform:scale(1.12);}
+}
+
+/* BOUQUETS */
+.bouquets{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  max-width:850px;
+  width:100%;
+  margin-top:30px;
+}
+
+.bouquet{
+  background:white;
+  border:1px solid #f1ccd3;
+  border-radius:25px;
+  padding:30px 15px;
+  cursor:pointer;
+  text-align:center;
+  min-height:190px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  transition:.3s;
+}
+
+.bouquet:hover{
+  transform:translateY(-5px);
+}
+
+.bouquet-emoji{
+  font-size:3.5rem;
+  margin-bottom:12px;
+}
+
+.reveal{
+  display:none;
+  margin-top:15px;
+  font-size:.9rem;
+  line-height:1.6;
+}
+
+.bouquet.open .reveal{
+  display:block;
+}
+
+@media(max-width:600px){
+  .bouquets{
+    grid-template-columns:1fr;
+    max-width:350px;
+  }
+}
+
+/* QUIZ */
+.quiz{
+  background:#f8e4e5;
+}
+
+.quiz-box{
+  max-width:600px;
+  width:100%;
+  background:white;
+  border-radius:30px;
+  padding:30px 22px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(80,20,30,.1);
+}
+
+.option{
+  display:block;
+  width:100%;
+  border:1px solid #edcbd1;
+  background:#fffafa;
+  color:#4b2029;
+  padding:14px;
+  border-radius:15px;
+  margin:10px 0;
+  cursor:pointer;
+  font-family:inherit;
+}
+
+.option:hover{
+  background:#ffe8ec;
+}
+
+.quiz-result{
+  margin-top:18px;
+  font-weight:bold;
+}
+
+/* SECRET */
+.secret{
+  background:#fff8f5;
+}
+
+.secret-button{
+  background:transparent;
+  color:#8d263c;
+  border:1px dashed #b65b6c;
+  padding:15px 25px;
+  border-radius:999px;
+  cursor:pointer;
+  margin-top:25px;
+}
+
+.secret-message{
+  display:none;
+  max-width:550px;
+  margin-top:30px;
+  background:#fff;
+  border-radius:25px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(70,20,30,.1);
+}
+
+/* GIFT */
+.gift{
+  background:#f8e4e5;
+}
+
+.gift-box{
+  font-size:7rem;
+  cursor:pointer;
+  transition:.4s;
+  margin:20px;
+}
+
+.gift-box:hover{
+  transform:scale(1.08) rotate(-3deg);
+}
+
+.gift-content{
+  display:none;
+  max-width:600px;
+  width:100%;
+  text-align:center;
+}
+
+.gift-content.show{
+  display:block;
+}
+
+.gift-items{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  margin-top:25px;
+  flex-wrap:wrap;
+}
+
+.gift-item{
+  background:white;
+  border-radius:25px;
+  padding:25px;
+  width:200px;
+  box-shadow:0 10px 30px rgba(70,20,30,.08);
+}
+
+.gift-icon{
+  font-size:4rem;
+  margin-bottom:10px;
+}
+
+/* FIRST MEETING */
+.meeting{
+  background:#fff8f5;
+}
+
+.meeting-card{
+  max-width:700px;
+  text-align:center;
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.5rem;
+  line-height:1.8;
+}
+
+.airport{
+  font-size:4rem;
+  margin:20px;
+}
+
+/* FUTURE */
+.future{
+  background:#8d263c;
+  color:white;
+}
+
+.future-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:15px;
+  max-width:800px;
+  width:100%;
+  margin-top:30px;
+}
+
+.future-card{
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:24px;
+  padding:25px;
+  text-align:center;
+  background:rgba(255,255,255,.07);
+}
+
+.future-card .emoji{
+  font-size:2.5rem;
+  margin-bottom:10px;
+}
+
+/* COUNTDOWN */
+.countdowns{
+  background:#fff8f5;
+}
+
+.countdown-block{
+  width:100%;
+  max-width:800px;
+  margin:20px 0;
+  padding:30px 20px;
+  background:white;
+  border-radius:30px;
+  text-align:center;
+  box-shadow:0 10px 35px rgba(80,20,30,.08);
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+.time{
+  min-width:75px;
+  padding:15px 8px;
+  background:#fff0f2;
+  border-radius:18px;
+}
+
+.time-number{
+  display:block;
+  font-family:"Cormorant Garamond",serif;
+  font-size:2rem;
+  font-weight:bold;
+}
+
+.time-label{
+  font-size:.65rem;
+  letter-spacing:1px;
+}
+
+/* LETTER */
+.letter{
+  background:#f8e4e5;
+}
+
+.letter-paper{
+  max-width:700px;
+  background:#fffdf9;
+  padding:40px 28px;
+  border-radius:8px;
+  box-shadow:0 20px 60px rgba(80,20,30,.15);
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.2rem;
+  line-height:1.8;
+}
+
+.letter-paper p{
+  margin-bottom:17px;
+}
+
+.signature{
+  font-family:"Great Vibes",cursive;
+  font-size:2.4rem;
+  margin-top:20px;
+}
+
+/* FINAL */
+.final{
+  min-height:100vh;
   background:
-    radial-gradient(circle at 50% 50%, #3a1619 0%, #111111 60%);
+    radial-gradient(circle at center,#ffe2e7,transparent 50%),
+    #8d263c;
+  color:white;
+  text-align:center;
 }
 
-.letter {
-  max-width: 650px;
-  background: #f5eee6;
-  color: #222;
-  padding: 35px 25px;
-  border-radius: 20px;
-  margin-top: 20px;
-  text-align: left;
-  display: none;
+.final-love{
+  font-family:"Great Vibes",cursive;
+  font-size:clamp(4rem,16vw,8rem);
 }
 
-.letter p {
-  color: #403a35;
+.final p{
+  font-family:"Cormorant Garamond",serif;
+  font-size:1.5rem;
 }
 
-.footer {
-  margin-top: 35px;
-  font-size: 12px;
-  opacity: 0.5;
+/* FADE */
+.fade{
+  animation:fadeIn 1s ease;
 }
 
-.sparkle {
-  position: fixed;
-  pointer-events: none;
-  animation: floatUp 2s linear forwards;
-  z-index: 99;
-}
-
-@keyframes floatUp {
-  from {
-    transform: translateY(0) scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-150px) scale(1.5);
-    opacity: 0;
-  }
-}
-
-@media(max-width:500px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  section {
-    padding: 60px 20px;
-  }
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(15px);}
+  to{opacity:1;transform:translateY(0);}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="small">A little something for you</div>
+<!-- OPENING -->
+<section id="opening">
+  <div class="eyebrow">A little surprise for you</div>
 
-  <h1>HEY<br><span class="red">JAAN</span>… 👀</h1>
+  <h1 class="opening-title">
+    HAPPY<br>
+    BOYFRIEND DAY ❤️
+  </h1>
 
-  <p class="sub">
-    I made you a tiny corner of the internet.<br>
-    So please… don't skip anything.
+  <h2 class="script" style="margin-top:20px;">
+    MY LOVE
+  </h2>
+
+  <p class="opening-sub">
+    made with love, just for you ♡
   </p>
 
-  <button onclick="document.getElementById('story').scrollIntoView()">
-    OPEN MY SURPRISE ❤️
+  <button class="btn" onclick="openSurprise()">
+    OPEN MY SURPRISE →
   </button>
+
+  <div class="scroll-note">♡ keep scrolling, my love ♡</div>
 </section>
 
 
-<!-- OUR STORY -->
-<section class="story" id="story">
-  <div class="small">Chapter one</div>
+<!-- MUSIC -->
+<section class="music">
+  <div class="music-box">
+    <div class="music-title">♡ A SONG DEDICATED TO YOU ♡</div>
+    <div class="music-name">ALFAAZ</div>
 
-  <h2>Our little story.</h2>
+    <button class="play" onclick="toggleMusic()" id="playButton">
+      ♡
+    </button>
+
+    <audio id="song" preload="auto">
+      <source src="audio/alfaaz.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</section>
+
+
+<!-- STORY -->
+<section class="story">
+  <div class="eyebrow">our story</div>
+
+  <h2>How did this even become us?</h2>
 
   <div class="story-card">
 
-    <div class="story-line">
-      <strong>IT STARTED WITH A PHONE NUMBER</strong>
-      <p>
-        Not a dating app. Not a random DM.
-        Just two families exchanging two phone numbers,
-        hoping that maybe… we could be something.
-      </p>
-    </div>
+    <p>
+      It started in the most unexpected way.
+      Our parents exchanged our numbers...
+      and <strong>I messaged first.</strong>
+    </p>
 
-    <div class="story-line">
-      <strong>THEN CAME WHATSAPP 💬</strong>
-      <p>
-        Two complete strangers started talking.
-        Neither of us knew that those first conversations
-        were going to change everything.
-      </p>
-    </div>
+    <br>
 
-    <div class="story-line">
-      <strong>THREE DAYS. ❤️</strong>
-      <p>
-        That's all it took for you to say those three little words…
-        <br><br>
-        <b>“I LOVE YOU.”</b>
-        <br><br>
-        Looking back, it sounds crazy.
-        But somehow, with you, it just felt right.
-      </p>
-    </div>
+    <p>
+      That first night, we talked about our likes,
+      dislikes, nature and routines.
+      And somehow, everything just felt right.
+    </p>
 
-    <div class="story-line">
-      <strong>AND THEN… WE SAID YES 💍</strong>
-      <p>
-        We said yes to each other.
-        Yes to our families.
-        And unknowingly… yes to a whole lifetime together.
-      </p>
-    </div>
+    <br>
 
-    <div class="story-line">
-      <strong>20 DAYS LATER…</strong>
-      <p>
-        We were officially <b>ROKAFIED.</b> 🥹
-        <br><br>
-        From strangers with exchanged numbers
-        to two people promising to walk into the future together.
-      </p>
-    </div>
+    <p>
+      Same vibe. Same kind of energy.
+      You were my type.
+      And somehow, you checked all my boxes.
+    </p>
+
+    <br>
+
+    <p>
+      Then, within just <strong>three days</strong>,
+      you said those three words...
+    </p>
+
+    <br>
+
+    <p class="script" style="font-size:3rem;">
+      I love you.
+    </p>
+
+    <br>
+
+    <p>
+      And you said yes to your family.
+    </p>
+
+    <br>
+
+    <p>
+      On <strong>2 May</strong>, my birthday,
+      I finally said it back.
+    </p>
+
+    <br>
+
+    <p>
+      Our roka had to wait because my grandmother
+      was in the hospital...
+      but on <strong>17 May</strong>,
+      it finally became official. ❤️
+    </p>
 
   </div>
-
-  <p style="margin-top:20px;">
-    Maybe ours wasn't the typical love story…
-    <br><br>
-    <b>but it's my favourite one. ❤️</b>
-  </p>
 </section>
 
 
-<!-- THINGS I LOVE -->
-<section class="things">
-  <div class="small">Things I've discovered about you</div>
+<!-- BEFORE FIRST MEETING -->
+<section class="memory">
+  <div class="eyebrow">something unusual about us</div>
 
-  <h2>Little things.<br><span class="red">Big feelings.</span></h2>
+  <h2>Our first memory,<br>before our first meeting.</h2>
 
-  <p>
-    We haven't even met in person yet…
-    and somehow you've already become such a familiar part of my everyday life.
+  <p class="memory-text">
+    We don't have our first meeting yet.
+    <br>
+    We don't have our first hug yet.
+    <br>
+    We don't even have our first picture together yet.
+    <br><br>
+    But somehow...
+    <br>
+    <strong>we already have a whole love story.</strong>
   </p>
 
-  <div class="cards" style="margin-top:30px;">
-    <div class="card">Your random messages 💬</div>
-    <div class="card">Our late-night talks 🌙</div>
-    <div class="card">The way you make me smile</div>
-    <div class="card">Our stupid jokes 😂</div>
-    <div class="card">The comfort in talking to you</div>
-    <div class="card">The future we're building 💍</div>
+  <div class="memory-frame">
+    <img src="couple/our-memory.jpg" alt="Our memory">
+  </div>
+</section>
+
+
+<!-- LITTLE THINGS -->
+<section>
+  <div class="eyebrow">about you</div>
+
+  <h2>The things that make you my person</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">❤️</div>
+      <h3>You handle my moods.</h3>
+      <p>You somehow know how to calm your dramatic jaan.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">👂</div>
+      <h3>You listen.</h3>
+      <p>You make me feel heard instead of making me feel like I'm too much.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🥹</div>
+      <h3>You stay patient.</h3>
+      <p>Even when I'm emotional, irritated or overthinking.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3>You keep me close.</h3>
+      <p>Your calls, messages and little updates mean more than you know.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🫶</div>
+      <h3>You make me feel secure.</h3>
+      <p>And that's one of the most beautiful things about us.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">💌</div>
+      <h3>You apologise.</h3>
+      <p>Especially when you realise something might have upset me.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CHATS -->
+<section class="chats">
+  <div class="eyebrow">your words</div>
+
+  <h2>Some of my favourite messages</h2>
+
+  <p class="small" style="margin-bottom:30px;">
+    Because sometimes your long texts say everything my heart needs to hear.
+  </p>
+
+  <div class="chat-grid">
+    <img src="chats/chat1.jpg" alt="Chat message">
+    <img src="chats/chat2.jpg" alt="Chat message">
+    <img src="chats/chat3.jpg" alt="Chat message">
+    <img src="chats/chat4.jpg" alt="Chat message">
+  </div>
+</section>
+
+
+<!-- JAANE -->
+<section class="jaane">
+  <div class="eyebrow">one word</div>
+
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;">
+    One word that melts me every single time...
+  </p>
+
+  <div class="big-jaane">
+    jaane
+  </div>
+
+  <div class="jaane-heart">♥</div>
+</section>
+
+
+<!-- BOUQUETS -->
+<section>
+  <div class="eyebrow">a little something</div>
+
+  <h2>Three flowers for you 💐</h2>
+
+  <p class="small">
+    Tap each one.
+  </p>
+
+  <div class="bouquets">
+
+    <div class="bouquet" onclick="this.classList.toggle('open')">
+      <div class="bouquet-emoji">💐</div>
+      <strong>For the way you love me</strong>
+
+      <div class="reveal">
+        You somehow make loving me look easy.
+        Even when I'm dramatic, stubborn, emotional or overthinking,
+        you never make me feel like I'm too much.
+        <br><br>
+        You just stay, listen, understand and love me a little harder.
+        <br><br>
+        <strong>Thank you for loving your jaan exactly as she is. ❤️</strong>
+      </div>
+    </div>
+
+
+    <div class="bouquet" onclick="this.classList.toggle('open')">
+      <div class="bouquet-emoji">🌹</div>
+      <strong>For the distance</strong>
+
+      <div class="reveal">
+        I hate that sometimes I have to miss you through a screen.
+        I miss your calls, your messages, your random updates,
+        your long texts...
+        <br><br>
+        But somehow, even with all these kilometres between us,
+        you still feel like the closest person to me.
+        <br><br>
+        Soon, I won't have to imagine your hug anymore.
+        <strong>I'll finally get to run into it. ❤️</strong>
+      </div>
+    </div>
+
+
+    <div class="bouquet" onclick="this.classList.toggle('open')">
+      <div class="bouquet-emoji">🌷</div>
+      <strong>For everything waiting for us</strong>
+
+      <div class="reveal">
+        We haven't even had our first proper meeting yet...
+        and somehow we've already built so much love.
+        <br><br>
+        Soon there will be airport hugs, long drives,
+        hands held across the car, travelling together,
+        our home in Canada, festivals, birthdays,
+        adventures and all the ordinary little days in between.
+        <br><br>
+        I don't know exactly what every tomorrow will look like.
+        But I know who I want beside me in all of them.
+        <br><br>
+        <strong>You. Always you. ❤️</strong>
+      </div>
+    </div>
+
   </div>
 </section>
 
 
 <!-- QUIZ -->
 <section class="quiz">
-  <div class="small">Important boyfriend test</div>
+  <div class="eyebrow">let's see how well you know us</div>
 
-  <h2>How well do you know your future wife? 👀</h2>
+  <h2>The Boyfriend Quiz ❤️</h2>
 
-  <div class="question">
-    <p><b>Question 1</b><br><br>
-    How many days did it take you to say “I love you”?</p>
+  <div class="quiz-box" id="quizBox">
 
-    <button class="option" onclick="answer(false)">
-      A. 3 weeks
-    </button>
+    <h3 id="question">
+      Who messaged first?
+    </h3>
 
-    <button class="option" onclick="answer(true)">
-      B. 3 DAYS 😂
-    </button>
+    <div id="options"></div>
 
-    <button class="option" onclick="answer(false)">
-      C. 3 months
-    </button>
+    <div class="quiz-result" id="quizResult"></div>
 
-    <div class="result" id="result"></div>
   </div>
+</section>
+
+
+<!-- SECRET -->
+<section class="secret">
+  <div class="eyebrow">pssst...</div>
+
+  <h2>There might be a secret here 👀</h2>
+
+  <p class="small">
+    But you have to be brave enough to click.
+  </p>
+
+  <button class="secret-button" onclick="showSecret()">
+    DON'T CLICK THIS 👀
+  </button>
+
+  <div class="secret-message" id="secretMessage">
+
+    <h3>Okay, you clicked it. 😂</h3>
+
+    <br>
+
+    <p>
+      Since you're already here, here's your punishment:
+    </p>
+
+    <br>
+
+    <p>
+      You have to give your jaan unlimited cuddles,
+      hold her hand on every long drive,
+      listen to all her dramatic stories,
+      handle all her mood swings,
+      and keep loving her for the rest of your life.
+    </p>
+
+    <br>
+
+    <p>
+      Unfortunately for you...
+      <br>
+      <strong>there is no escape. ❤️</strong>
+    </p>
+
+  </div>
+</section>
+
+
+<!-- GIFT -->
+<section class="gift">
+
+  <div class="eyebrow">your little gift</div>
+
+  <h2>A little something for my favourite person...</h2>
+
+  <div class="gift-box" onclick="openGift()">
+    🎁
+  </div>
+
+  <p class="small">
+    Tap the box.
+  </p>
+
+  <div class="gift-content" id="giftContent">
+
+    <div class="gift-items">
+
+      <div class="gift-item">
+        <div class="gift-icon">🎂</div>
+
+        <h3>For all our birthdays</h3>
+
+        <p>
+          And yes...
+          I'm claiming the biggest piece. 😂❤️
+        </p>
+      </div>
+
+
+      <div class="gift-item">
+        <div class="gift-icon">💍</div>
+
+        <h3>For our forever</h3>
+
+        <p>
+          Not just a ring...
+          a little symbol of everything waiting for us. ❤️
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FIRST MEETING -->
+<section class="meeting">
+
+  <div class="eyebrow">the moment I'm waiting for</div>
+
+  <h2>The first time I finally see you...</h2>
+
+  <div class="airport">✈️❤️</div>
+
+  <div class="meeting-card">
+
+    <p>
+      The airport.
+    </p>
+
+    <br>
+
+    <p>
+      I'll run to you.
+    </p>
+
+    <p>
+      I'll hug you.
+    </p>
+
+    <p>
+      And probably say,
+    </p>
+
+    <p class="script" style="font-size:3rem;">
+      “missed you so much.”
+    </p>
+
+    <br>
+
+    <p>
+      Then I'll drive you home.
+    </p>
+
+    <p>
+      And eventually we'll have those long drives
+      where I'm driving and you're sitting beside me,
+      holding my hand.
+    </p>
+
+    <br>
+
+    <p>
+      I think I've imagined that moment
+      more times than I can count.
+    </p>
+
+  </div>
+
 </section>
 
 
 <!-- FUTURE -->
 <section class="future">
-  <div class="small">Next chapter</div>
 
-  <h2>From this…</h2>
+  <div class="eyebrow">what's waiting for us</div>
 
-  <p>
-    A phone number.<br>
-    A WhatsApp chat.<br>
-    Three days.<br>
-    One “I love you.”<br>
-    One big YES.<br>
-    One Roka.
-  </p>
+  <h2>Our future sounds pretty beautiful.</h2>
 
-  <div class="arrow">↓</div>
+  <div class="future-grid">
 
-  <h2>…to this. ❤️</h2>
+    <div class="future-card">
+      <div class="emoji">🌴</div>
+      <h3>Thailand</h3>
+      <p>Beach days, private stays, party life and massages.</p>
+    </div>
 
-  <p style="font-size:22px;">
-    <b>BOYFRIEND</b>
-    <br>
-    ↓
-    <br>
-    <b>FIANCÉ</b>
-    <br>
-    ↓
-    <br>
-    <span class="red"><b>HUSBAND</b></span>
-  </p>
+    <div class="future-card">
+      <div class="emoji">🏔️</div>
+      <h3>Jibhi</h3>
+      <p>A little February escape together.</p>
+    </div>
 
-  <p style="margin-top:30px;">
-    Our first picture together is still waiting to be taken.
-    <br><br>
-    And I have a feeling…
-    <br><br>
-    <b>it's going to be one of my favourites. 📸❤️</b>
-  </p>
+    <div class="future-card">
+      <div class="emoji">🇨🇦</div>
+      <h3>Canada</h3>
+      <p>Working hard and building our future together.</p>
+    </div>
+
+    <div class="future-card">
+      <div class="emoji">👶</div>
+      <h3>Someday</h3>
+      <p>Our little family, when we're ready.</p>
+    </div>
+
+    <div class="future-card">
+      <div class="emoji">🎉</div>
+      <h3>Every celebration</h3>
+      <p>Festivals, birthdays and all the little reasons to celebrate.</p>
+    </div>
+
+    <div class="future-card">
+      <div class="emoji">❤️</div>
+      <h3>Everything else</h3>
+      <p>Love, understanding, care, travel and ordinary days together.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- COUNTDOWNS -->
+<section class="countdowns">
+
+  <div class="eyebrow">counting down to us</div>
+
+  <h2>Two dates my heart is waiting for</h2>
+
+
+  <!-- INDIA -->
+  <div class="countdown-block">
+
+    <div class="eyebrow">THE DAY YOU COME TO INDIA</div>
+
+    <h3 style="font-size:2rem;">
+      15 December 2026 · 3:00 AM
+    </h3>
+
+    <div class="countdown" id="indiaCountdown"></div>
+
+  </div>
+
+
+  <!-- WEDDING -->
+  <div class="countdown-block">
+
+    <div class="eyebrow">OUR WEDDING</div>
+
+    <h3 style="font-size:2rem;">
+      7 February 2027 · 10:00 AM
+    </h3>
+
+    <div class="countdown" id="weddingCountdown"></div>
+
+  </div>
+
+</section>
+
+
+<!-- LETTER -->
+<section class="letter">
+
+  <div class="eyebrow">from your jaan</div>
+
+  <h2>A little note for you</h2>
+
+  <div class="letter-paper">
+
+    <p>
+      <strong>To my love, my safe place, my favourite person,</strong>
+    </p>
+
+    <p>
+      Happy Boyfriend Day, my love. ❤️
+    </p>
+
+    <p>
+      Somewhere between our long calls, endless messages,
+      little arguments, my mood swings and all the love in between,
+      you became so much more than someone I love.
+    </p>
+
+    <p>
+      You became my person.
+    </p>
+
+    <p>
+      Thank you for being patient with me,
+      for listening to me, for understanding me,
+      and for loving me even on the days when I'm a little too much.
+      Thank you for always making me feel heard, loved and safe.
+    </p>
+
+    <p>
+      I miss you more than I can explain,
+      and I cannot wait for the day when I don't have to miss you
+      through a screen anymore.
+    </p>
+
+    <p>
+      Our first hug is still waiting for us.
+      <br>
+      Our first picture is still waiting for us.
+      <br>
+      Our whole life is still waiting for us.
+    </p>
+
+    <p>
+      And somehow, I already know
+      I want every part of it with you.
+    </p>
+
+    <p>
+      <strong>Thank you for choosing me. Again and again.</strong>
+    </p>
+
+    <p>
+      Happy Boyfriend Day, my love.
+    </p>
+
+    <p>
+      <strong>I love you. ❤️</strong>
+    </p>
+
+    <div class="signature">
+      Forever yours,<br>
+      your jaan
+    </div>
+
+  </div>
+
 </section>
 
 
 <!-- FINAL -->
 <section class="final">
 
-  <div class="small">One last thing…</div>
-
-  <h2>Open this when you're ready. ❤️</h2>
-
-  <button onclick="openLetter()">
-    OPEN MY LETTER 💌
-  </button>
-
-  <div class="letter" id="letter">
-
-    <p>
-      Dear Fiance,
-      <br><br>
-
-      If someone had told me that a simple phone number
-      would eventually lead me here, I probably wouldn't
-      have believed them.
-      <br><br>
-
-      We haven't had years of memories together.
-      We haven't even met in person yet.
-      <br><br>
-
-      But somehow, in such a short time,
-      you've become someone I can't imagine my future without.
-      <br><br>
-
-      You started as the guy my parents found.
-      Then you became the person I looked forward to talking to.
-      Then you became my fiancé.
-      <br><br>
-
-      And soon, you'll become my husband.
-      <br><br>
-
-      Maybe our story started as an arranged marriage…
-      but somewhere along the way,
-      it started feeling like <i>our</i> love story.
-      <br><br>
-
-      Happy Boyfriend Day, my love. ❤️
-      <br><br>
-
-      Here's to our first meeting,
-      our first picture,
-      our first home,
-      our first million memories…
-      and everything after that.
-      <br><br>
-
-      <b>See you at the airport. 💍</b>
-      <br><br>
-
-      — Your future wife ❤️
-    </p>
-
+  <div class="eyebrow">
+    one last thing
   </div>
 
-  <div class="footer">
-    Made with way too much love.
+  <div class="final-love">
+    I love you.
   </div>
+
+  <p>
+    Happy Boyfriend Day, my love. ❤️
+  </p>
+
+  <br>
+
+  <p>
+    Forever yours,<br>
+    your jaan
+  </p>
 
 </section>
 
 
 <script>
 
-function answer(correct) {
-  const result = document.getElementById("result");
+/* -----------------------------
+   OPEN SURPRISE
+----------------------------- */
 
-  if (correct) {
-    result.innerHTML = "CORRECT 😂❤️ You actually remember!";
-    createHearts();
-  } else {
-    result.innerHTML = "Excuse me?! 😭 We need to have a conversation.";
-  }
-}
+function openSurprise(){
 
-function openLetter() {
-  const letter = document.getElementById("letter");
-
-  letter.style.display = "block";
+  document.querySelector('.music').scrollIntoView({
+    behavior:'smooth'
+  });
 
   createHearts();
 
-  setTimeout(() => {
-    letter.scrollIntoView({
-      behavior: "smooth",
-      block: "center"
-    });
-  }, 100);
 }
 
-function createHearts() {
-  for (let i = 0; i < 12; i++) {
 
-    const heart = document.createElement("div");
+/* -----------------------------
+   FLOATING HEARTS
+----------------------------- */
 
-    heart.className = "sparkle";
-    heart.innerHTML = Math.random() > 0.5 ? "❤️" : "✨";
+function createHearts(){
 
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = (60 + Math.random() * 30) + "vh";
-    heart.style.fontSize = (15 + Math.random() * 20) + "px";
+  for(let i=0;i<15;i++){
 
-    document.body.appendChild(heart);
+    setTimeout(()=>{
 
-    setTimeout(() => {
-      heart.remove();
-    }, 2000);
+      const heart=document.createElement('div');
+
+      heart.className='float-heart';
+
+      heart.innerHTML=
+        Math.random()>.5 ? '♥' : '♡';
+
+      heart.style.left=
+        Math.random()*100+'vw';
+
+      heart.style.animationDuration=
+        (4+Math.random()*4)+'s';
+
+      document.body.appendChild(heart);
+
+      setTimeout(()=>{
+        heart.remove();
+      },8000);
+
+    },i*180);
+
   }
+
 }
+
+
+/* -----------------------------
+   MUSIC
+----------------------------- */
+
+const song=document.getElementById('song');
+const playButton=document.getElementById('playButton');
+
+let musicStarted=false;
+
+function toggleMusic(){
+
+  if(!musicStarted){
+
+    song.currentTime=74;
+
+    song.play();
+
+    musicStarted=true;
+
+    playButton.innerHTML='❚❚';
+
+  }else{
+
+    if(song.paused){
+
+      song.play();
+
+      playButton.innerHTML='❚❚';
+
+    }else{
+
+      song.pause();
+
+      playButton.innerHTML='♡';
+
+    }
+
+  }
+
+}
+
+song.addEventListener('ended',()=>{
+  playButton.innerHTML='♡';
+  musicStarted=false;
+});
+
+
+/* -----------------------------
+   QUIZ
+----------------------------- */
+
+const quizQuestions=[
+
+  {
+    q:"Who messaged first?",
+    options:["Him","Me ❤️"],
+    answer:1
+  },
+
+  {
+    q:"Who is more dramatic?",
+    options:["Him","Me 😂"],
+    answer:1
+  },
+
+  {
+    q:"What do we both love?",
+    options:["Travelling & adventure ❤️","Arguing all day","Doing absolutely nothing"],
+    answer:0
+  },
+
+  {
+    q:"What does he do when I'm upset?",
+    options:["Gets angry","Ignores me","Listens and calms me ❤️"],
+    answer:2
+  },
+
+  {
+    q:"What am I most excited for?",
+    options:["Our first hug ❤️","Shopping","Nothing"],
+    answer:0
+  }
+
+];
+
+let currentQuestion=0;
+let score=0;
+
+function loadQuestion(){
+
+  const question=
+    quizQuestions[currentQuestion];
+
+  document.getElementById('question').innerText=
+    question.q;
+
+  const optionsDiv=
+    document.getElementById('options');
+
+  optionsDiv.innerHTML='';
+
+  document.getElementById('quizResult').innerText='';
+
+  question.options.forEach((option,index)=>{
+
+    const button=
+      document.createElement('button');
+
+    button.className='option';
+
+    button.innerText=option;
+
+    button.onclick=()=>{
+      answerQuestion(index);
+    };
+
+    optionsDiv.appendChild(button);
+
+  });
+
+}
+
+function answerQuestion(index){
+
+  const question=
+    quizQuestions[currentQuestion];
+
+  const result=
+    document.getElementById('quizResult');
+
+  if(index===question.answer){
+
+    score++;
+
+    result.innerText='Correct ❤️';
+
+  }else{
+
+    result.innerText=
+      'Hmm... your jaan knows you better 😂❤️';
+
+  }
+
+  setTimeout(()=>{
+
+    currentQuestion++;
+
+    if(currentQuestion<quizQuestions.length){
+
+      loadQuestion();
+
+    }else{
+
+      document.getElementById('question').innerText=
+        `You scored ${score}/${quizQuestions.length} ❤️`;
+
+      document.getElementById('options').innerHTML='';
+
+      result.innerText=
+        'Not bad, boyfriend. I still love you. 😂❤️';
+
+    }
+
+  },1000);
+
+}
+
+loadQuestion();
+
+
+/* -----------------------------
+   SECRET
+----------------------------- */
+
+function showSecret(){
+
+  const secret=
+    document.getElementById('secretMessage');
+
+  secret.style.display='block';
+
+  createHearts();
+
+}
+
+
+/* -----------------------------
+   GIFT
+----------------------------- */
+
+function openGift(){
+
+  const gift=
+    document.getElementById('giftContent');
+
+  gift.classList.add('show');
+
+  createHearts();
+
+}
+
+
+/* -----------------------------
+   COUNTDOWN
+----------------------------- */
+
+function makeCountdown(target,elementId){
+
+  function update(){
+
+    const now=new Date().getTime();
+
+    const distance=
+      target-now;
+
+    const element=
+      document.getElementById(elementId);
+
+    if(distance<=0){
+
+      element.innerHTML=
+        '<div style="font-family:Cormorant Garamond,serif;font-size:2rem;">THE DAY IS HERE ❤️</div>';
+
+      return;
+
+    }
+
+    const days=
+      Math.floor(
+        distance/(1000*60*60*24)
+      );
+
+    const hours=
+      Math.floor(
+        (distance%(1000*60*60*24))/
+        (1000*60*60)
+      );
+
+    const minutes=
+      Math.floor(
+        (distance%(1000*60*60))/
+        (1000*60)
+      );
+
+    const seconds=
+      Math.floor(
+        (distance%(1000*60))/1000
+      );
+
+    element.innerHTML=`
+
+      <div class="time">
+        <span class="time-number">${days}</span>
+        <span class="time-label">DAYS</span>
+      </div>
+
+      <div class="time">
+        <span class="time-number">${hours}</span>
+        <span class="time-label">HOURS</span>
+      </div>
+
+      <div class="time">
+        <span class="time-number">${minutes}</span>
+        <span class="time-label">MINUTES</span>
+      </div>
+
+      <div class="time">
+        <span class="time-number">${seconds}</span>
+        <span class="time-label">SECONDS</span>
+      </div>
+
+    `;
+
+  }
+
+  update();
+
+  setInterval(update,1000);
+
+}
+
+
+/*
+  INDIA ARRIVAL
+  15 DECEMBER 2026
+  3:00 AM
+*/
+
+makeCountdown(
+  new Date("2026-12-15T03:00:00+05:30").getTime(),
+  "indiaCountdown"
+);
+
+
+/*
+  WEDDING
+  7 FEBRUARY 2027
+  10:00 AM
+*/
+
+makeCountdown(
+  new Date("2027-02-07T10:00:00+05:30").getTime(),
+  "weddingCountdown"
+);
+
+
+/* -----------------------------
+   START HEARTS OCCASIONALLY
+----------------------------- */
+
+setInterval(()=>{
+
+  if(Math.random()>.35){
+    createHearts();
+  }
+
+},12000);
 
 </script>
 
